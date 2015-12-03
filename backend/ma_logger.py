@@ -24,8 +24,14 @@ class Logger(Singleton):
         current_time = datetime.datetime.now().strftime("%I:%M%p - %B %d, %Y")
         self.action_history.append("[" + current_time + "]" + " New action on server: " + action)
 
+    def getLatestAction(self):
+        if not self.action_history:
+            return ""
+        return self.action_history[-1]
+
     # Must be called at the end of action registration to write all files to memory
     def log(self):
         with io.open('meetapp.logs', 'a') as file:
             for action in self.action_history:
                 file.write(unicode(action + "\n"))
+        self.action_history = []

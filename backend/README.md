@@ -11,3 +11,6 @@
     2. install pip
     3. run pip install flask
     4. run python app.py in /src/ directory
+
+    
+* By: Cam & Walls

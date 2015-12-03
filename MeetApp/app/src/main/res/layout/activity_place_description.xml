@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/activity_place_description_linearLayout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/activity_place_description_textView_placeNameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre: "
+                android:textSize="18sp"
+                android:layout_margin="10dp"/>
+
+            <TextView
+                android:id="@+id/activity_place_description_textView_placeName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_marginLeft="3dp"
+                android:includeFontPadding="false"
+                android:layout_toEndOf="@+id/activity_place_description_textView_placeNameText"
+                android:layout_alignBottom="@+id/activity_place_description_textView_placeNameText"/>
+
+            <TextView
+                android:id="@+id/activity_place_description_textView_categoryText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Categoría: "
+                android:textSize="18sp"
+                android:includeFontPadding="false"
+                android:layout_below="@+id/activity_place_description_textView_placeNameText"
+                android:layout_marginLeft="10dp" />
+
+            <TextView
+                android:id="@+id/activity_place_description_textView_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:includeFontPadding="false"
+                android:layout_marginLeft="3dp"
+                android:layout_toEndOf="@+id/activity_place_description_textView_categoryText"
+                android:layout_alignBottom="@+id/activity_place_description_textView_categoryText"/>
+
+            <TextView
+                android:id="@+id/activity_place_description_textView_descriptionText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Descripción: "
+                android:includeFontPadding="false"
+                android:layout_below="@+id/activity_place_description_textView_categoryText"
+                android:textSize="18sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:id="@+id/activity_place_description_textView_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:layout_marginLeft="10dp"
+                android:maxLines="7"
+                android:includeFontPadding="false"
+                android:ellipsize="end"
+                android:layout_below="@+id/activity_place_description_textView_descriptionText"/>
+
+        </RelativeLayout>
+
+        <fragment
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/activity_place_description_fragment_map"
+            tools:context=".MapsActivity"
+            android:name="com.google.android.gms.maps.MapFragment" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/activity_place_description_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Listo"
+        android:textAllCaps="false"
+        android:drawableLeft="@android:drawable/ic_menu_agenda"
+        android:paddingLeft="5dp"
+        android:layout_margin="10dp"
+        android:includeFontPadding="false"
+        android:layout_gravity="bottom"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:background="@color/colorPrimary"/>
+
+</FrameLayout>

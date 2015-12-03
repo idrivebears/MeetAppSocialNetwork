@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:id="@+id/fragment_activity_profile_swipeRefreshLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:fillViewport="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@color/colorPrimary"
+                android:paddingBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/fragment_activity_profile_imageView"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:contentDescription="@string/app_name"
+                    android:layout_marginTop="30dp"
+                    android:scaleType="fitXY"
+                    android:maxWidth="120dp"
+                    android:maxHeight="120dp" />
+
+                <TextView
+                    android:id="@+id/fragment_activity_profile_textView_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Alejandro Velasco"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="15dp"
+                    android:includeFontPadding="false"
+                    android:textColor="#FFFFFF"/>
+
+                <TextView
+                    android:id="@+id/fragment_activity_profile_textView_age"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Edad: "
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/fragment_activity_profile_textView_gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sexo: "
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/fragment_activity_profile_textView_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ubicación: "
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:textColor="#FFFFFF" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/fragment_activity_profile_editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionSearch"
+                android:singleLine="true"
+                android:inputType="text"
+                android:hint="Buscar en historial..."
+                android:includeFontPadding="false"
+                android:drawableLeft="@android:drawable/ic_menu_search"/>
+
+            <com.kiwi.meetapp.gui.CustomListView
+                android:id="@+id/fragment_activity_profile_listView"
+                android:layout_width="match_parent"
+                android:focusable="false"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.v4.widget.SwipeRefreshLayout>

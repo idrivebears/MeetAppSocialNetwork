@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_create_event_linearLayout"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <EditText
+        android:id="@+id/activity_create_event_editText_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre"
+        android:inputType="textCapSentences|text"
+        android:layout_margin="10dp"
+        android:includeFontPadding="false"
+        android:textSize="20sp"/>
+
+    <com.kiwi.meetapp.gui.CustomEditText
+        android:id="@+id/activity_create_event_editText_description"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.4"
+        android:hint="Descripción"
+        android:imeOptions="actionDone"
+        android:inputType="textAutoCorrect|textCapSentences|textMultiLine"
+        android:layout_margin="10dp"
+        android:includeFontPadding="false"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:id="@+id/activity_create_event_editText_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Fecha"
+        android:focusable="false"
+        android:clickable="true"
+        android:includeFontPadding="false"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:id="@+id/activity_create_event_editText_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Hora"
+        android:focusable="false"
+        android:textSize="20sp"
+        android:clickable="true"
+        android:includeFontPadding="false"
+        android:layout_margin="10dp"/>
+
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/activity_create_event_textView_visibility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Visibilidad"
+            android:includeFontPadding="false"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/activity_create_event_spinner_visibility"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:layout_marginLeft="10dp"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/activity_create_event_button_place"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="¿Dónde?"
+        android:textAllCaps="false"
+        android:drawableLeft="@android:drawable/ic_menu_mylocation"
+        android:layout_margin="10dp"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:includeFontPadding="false"
+        android:background="@color/colorPrimary"/>
+
+</LinearLayout>

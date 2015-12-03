@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent" >
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_above="@+id/activity_event_description_linearLayout_comments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/activity_event_description_textView_eventName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Evento: "
+            android:textSize="16sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:includeFontPadding="false"
+            android:layout_marginBottom="5dp"/>
+
+        <TextView
+            android:id="@+id/activity_event_description_textView_eventDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Descripción: "
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:textSize="16sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:includeFontPadding="false"
+            android:layout_marginBottom="5dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp">
+            <TextView
+                android:id="@+id/activity_event_description_textView_eventVisibility"
+                android:layout_width="0dp"
+                android:layout_weight="0.45"
+                android:layout_height="wrap_content"
+                android:text="Visibilidad: "
+                android:includeFontPadding="false"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/activity_event_description_textView_eventDateTime"
+                android:layout_width="0dp"
+                android:layout_weight="0.55"
+                android:layout_height="wrap_content"
+                android:text="Fecha: "
+                android:includeFontPadding="false"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/activity_event_description_textView_placeName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lugar: "
+            android:textSize="16sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:includeFontPadding="false"
+            android:layout_marginBottom="5dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp">
+            <TextView
+                android:id="@+id/activity_event_description_textView_creator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Creador:"
+                android:textSize="16sp"
+                android:includeFontPadding="false"
+                />
+            <TextView
+                android:id="@+id/activity_event_description_textView_creatorName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alejandro Velasco Espejo"
+                android:layout_marginLeft="5dp"
+                android:textSize="16sp"
+                android:includeFontPadding="false"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/activity_event_description_textView_assistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¿Asistiré?:"
+                android:textSize="16sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:includeFontPadding="false"
+                android:layout_marginBottom="5dp"/>
+
+            <ToggleButton
+                android:id="@+id/activity_event_description_toggleButton"
+                android:layout_width="43dp"
+                android:layout_height="32dp"
+                android:background="@drawable/toggle_selector"
+                android:text=""
+                android:textOff=""
+                android:textOn="" />
+
+            <TextView
+                android:id="@+id/activity_event_description_textView_assistanceAnswer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No"
+                android:textSize="16sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:includeFontPadding="false"
+                android:layout_marginBottom="5dp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/activity_event_description_textView_comments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Comentarios:"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:includeFontPadding="false"
+            android:layout_marginBottom="5dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lightGray"/>
+
+        <ListView
+            android:id="@+id/activity_event_description_listView_comments"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:dividerHeight="0.5dp"
+            android:divider="@color/lightGray"
+            android:background="#40CECECE"
+            android:scrollbars="vertical"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lightGray"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/activity_event_description_linearLayout_comments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp">
+
+        <EditText
+            android:id="@+id/activity_event_description_editText_newComment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:imeOptions="actionDone"
+            android:layout_weight=".88"
+            android:includeFontPadding="false"
+            android:hint="Comentar..."
+            />
+
+        <ImageView
+            android:id="@+id/activity_event_description_imageView_comment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".12"
+            android:src="@android:drawable/ic_menu_edit"/>
+    </LinearLayout>
+
+</RelativeLayout>

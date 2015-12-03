@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragment_map"
+        tools:context=".MapsActivity"
+        android:name="com.google.android.gms.maps.MapFragment" />
+
+    <Button
+        android:id="@+id/activity_map_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Listo"
+        android:layout_gravity="bottom"
+        android:background="@color/colorPrimary"
+        android:layout_margin="20dp"
+        android:includeFontPadding="false"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:drawableLeft="@android:drawable/ic_dialog_map"
+        android:paddingLeft="5dp"/>
+
+</FrameLayout>

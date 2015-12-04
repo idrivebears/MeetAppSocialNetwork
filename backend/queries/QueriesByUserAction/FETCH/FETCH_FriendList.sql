@@ -1,0 +1,25 @@
+-- FETCH list of friends
+
+CREATE PROCEDURE FETCH_FRIEND_LIST
+(@FACEBOOK_ID	VARCHAR(50))
+AS
+BEGIN
+
+	SELECT 
+			USER2.FacebookID,
+			USER2.Name,
+			USER2.LastName
+	FROM	
+			MA_User AS USER1,
+			MA_User AS USER2,
+			MA_Users_Relation
+	WHERE	
+			USER1.IDUser = MA_Users_Relation.IDUser_1
+		AND	USER2.IDUser = MA_Users_Relation.IDUser_2
+		AND	USER1.FacebookID = @FACEBOOK_ID
+	ORDER BY
+			USER2.Name
+END
+
+
+EXECUTE FETCH_FRIEND_LIST 'CHA89EUF3LZOAP75SZS1BB'
